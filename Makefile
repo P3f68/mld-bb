@@ -152,7 +152,7 @@ $(TOPDIR)/conf/local.conf: $(DEPDIR)/.local.conf.$(LOCAL_CONF_HASH)
 	@echo 'require $(TOPDIR)/conf/$(DISTRO).conf' >> $@
 
 $(TOPDIR)/conf/site.conf: $(CURDIR)/site.conf
-	@ln -s ../../../../site.conf $@
+	@ln -s ../../../../../site.conf $@
 
 $(CURDIR)/site.conf:
 	@echo 'SCONF_VERSION = "1"' >> $@
