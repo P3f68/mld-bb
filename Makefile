@@ -31,7 +31,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-i386 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi2 \
-        $(CURDIR)/meta-mld-source/meta-hardware/meta-wetek \
+    $(CURDIR)/meta-mld-source/meta-hardware/meta-wetek \
 	$(CURDIR)/meta-local \
 
 
