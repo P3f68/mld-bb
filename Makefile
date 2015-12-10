@@ -26,6 +26,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
+	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-amd64 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-bpi \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-i386 \
@@ -70,6 +71,13 @@ $(BBLAYERS):
 	[ -d $@ ] || $(MAKE) $(MFLAGS) update
 
 setupmbuild:
+ifeq ($(MACHINEBUILD),amd64)
+MACHINE=amd64
+MACHINEBUILD=genericx86-64
+else ifeq ($(MACHINEBUILD),i386)
+MACHINE=i386
+MACHINEBUILD=genericx86
+endif
 
 initialize: init
 
