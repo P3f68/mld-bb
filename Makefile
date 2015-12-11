@@ -21,7 +21,7 @@ export MACHINEBUILD
 
 BBLAYERS ?= \
 	$(CURDIR)/meta-yocto/meta-yocto \
-	$(CURDIR)/meta-yocto//meta-yocto-bsp \
+	$(CURDIR)/meta-yocto/meta-yocto-bsp \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
@@ -78,8 +78,14 @@ ifeq ($(MACHINEBUILD),amd64)
 MACHINE=genericx86-64
 MACHINEBUILD=amd64
 else ifeq ($(MACHINEBUILD),i386)
-MACHINE=i386
-MACHINEBUILD=genericx86
+MACHINE=genericx86
+MACHINEBUILD=i386
+else ifeq ($(MACHINEBUILD),rpi)
+MACHINE=raspberrypi
+MACHINEBUILD=rpi
+else ifeq ($(MACHINEBUILD),rpi2)
+MACHINE=raspberrypi2
+MACHINEBUILD=rpi2
 endif
 
 initialize: init
