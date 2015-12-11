@@ -29,13 +29,11 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-mld-source \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-amd64 \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-bpi \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-i386 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi2 \
-    $(CURDIR)/meta-mld-source/meta-hardware/meta-wetek \
-    $(CURDIR)/meta-mld-source/meta-mld \
+        $(CURDIR)/meta-mld-source/meta-hardware/meta-wetek \
+        $(CURDIR)/meta-mld-source/meta-mld \
 	$(CURDIR)/meta-local \
 
 
@@ -76,10 +74,10 @@ $(BBLAYERS):
 setupmbuild:
 ifeq ($(MACHINEBUILD),amd64)
 MACHINE=genericx86-64
-MACHINEBUILD=amd64
+MACHINEBUILD=x86
 else ifeq ($(MACHINEBUILD),i386)
 MACHINE=genericx86
-MACHINEBUILD=i386
+MACHINEBUILD=x86
 else ifeq ($(MACHINEBUILD),rpi)
 MACHINE=raspberrypi
 MACHINEBUILD=rpi
