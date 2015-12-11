@@ -161,6 +161,7 @@ LOCAL_CONF_HASH := $(call hash, \
 $(TOPDIR)/conf/local.conf: $(DEPDIR)/.local.conf.$(LOCAL_CONF_HASH)
 	@echo 'Generating $@'
 	@test -d $(@D) || mkdir -p $(@D)
+	@echo 'IMAGE_FSTYPES = "iso"' > $@
 	@echo 'TOPDIR = "$(TOPDIR)"' > $@
 	@echo 'require $(TOPDIR)/conf/$(DISTRO).conf' >> $@
 
