@@ -30,7 +30,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-bpi \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
         $(CURDIR)/meta-mld-source/meta-hardware/meta-wetek \
         $(CURDIR)/meta-mld-source/meta-mld \
@@ -84,6 +84,21 @@ MACHINEBUILD=rpi
 else ifeq ($(MACHINEBUILD),rpi2)
 MACHINE=raspberrypi2
 MACHINEBUILD=rpi2
+else ifeq ($(MACHINEBUILD),bpi)
+MACHINE=bananapi
+MACHINEBUILD=bpi
+else ifeq ($(MACHINEBUILD),cubieboard)
+MACHINE=cubieboard
+MACHINEBUILD=cubieboard
+else ifeq ($(MACHINEBUILD),cubieboard2)
+MACHINE=cubieboard2
+MACHINEBUILD=cubieboard2
+else ifeq ($(MACHINEBUILD),cubietruck)
+MACHINE=cubietruck
+MACHINEBUILD=cubietruck
+else ifeq ($(MACHINEBUILD),mele)
+MACHINE=mele
+MACHINEBUILD=mele
 endif
 
 initialize: init
