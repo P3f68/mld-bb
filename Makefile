@@ -72,7 +72,7 @@ $(BBLAYERS):
 
 setupmbuild:
 ifeq ($(MACHINEBUILD),amd64)
-MACHINE=amd64
+MACHINE=genericx86-64
 MACHINEBUILD=amd64
 else ifeq ($(MACHINEBUILD),i386)
 MACHINE=i386
