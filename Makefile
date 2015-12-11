@@ -20,6 +20,8 @@ MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
 BBLAYERS ?= \
+	$(CURDIR)/meta-yocto/meta-yocto \
+	$(CURDIR)/meta-yocto//meta-yocto-bsp \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
@@ -144,6 +146,8 @@ $(TOPDIR)/conf/$(DISTRO).conf: $(DEPDIR)/.$(DISTRO).conf.$($(DISTRO)_CONF_HASH)
 	@echo 'BBINCLUDELOGS = "yes"' >> $@
 	@echo 'CONF_VERSION = "1"' >> $@
 	@echo 'EXTRA_IMAGE_FEATURES = "debug-tweaks"' >> $@
+	@echo 'IMAGE_FEATURES += "package-management"' >> $@ 
+	@echo 'PACKAGE_CLASSES ?= "package_deb"' >> $@
 	@echo 'USER_CLASSES = "buildstats"' >> $@
 	@echo '#PRSERV_HOST = "localhost:0"' >> $@
 
