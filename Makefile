@@ -20,8 +20,6 @@ MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
 BBLAYERS ?= \
-	$(CURDIR)/meta-yocto/meta-yocto \
-	$(CURDIR)/meta-yocto/meta-yocto-bsp \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
@@ -30,12 +28,15 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
-        $(CURDIR)/meta-mld-source/meta-hardware/meta-amlogic \
         $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
 
+#	$(CURDIR)/meta-yocto/meta-yocto \
+#	$(CURDIR)/meta-yocto/meta-yocto-bsp \
+
+#	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
+#	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
+#       $(CURDIR)/meta-mld-source/meta-hardware/meta-amlogic \
 
 CONFFILES = \
 	$(TOPDIR)/env.source \
