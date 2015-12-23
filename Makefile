@@ -8,7 +8,7 @@ PARALLEL_MAKE ?= -j $(NR_CPU)
 
 XSUM ?= md5sum
 DISTRO_TYPE ?= release
-DISTRO ?= mld
+DISTRO ?= MLD
 
 BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(DISTRO_TYPE)/$(MACHINE)
 TOPDIR = $(BUILD_DIR)
@@ -64,7 +64,7 @@ all: init
 	@echo "Openembedded for the MLD environment has been initialized"
 	@echo "properly. Now you can start building your image, by doing either:"
 	@echo
-	@echo "MACHINE=amd64 DISTRO=mld DISTRO_TYPE=release make image"
+	@echo "MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release make image"
 	@echo "	or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
 	@echo
