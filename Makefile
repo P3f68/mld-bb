@@ -28,7 +28,8 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
-        $(CURDIR)/meta-mld-source/meta-system \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
+    $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
 
 #	$(CURDIR)/meta-yocto/meta-yocto \
