@@ -113,6 +113,10 @@ init: setupmbuild $(BBLAYERS) $(CONFFILES)
 image: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
 
+test : init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -c menuconfig busybox
+
+
 update:
 	@echo 'Updating Git repositories...'
 	@HASH=`$(XSUM) $(MAKEFILE_LIST)`; \
