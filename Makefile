@@ -131,8 +131,8 @@ update:
 		$(GIT) submodule update --init && \
 		cd meta-mld-source  && \
 		if [ -n "$(GIT_REMOTE)" ]; then \
-			$(GIT) submodule sync && \
-			$(GIT) submodule update --init; \
+			$(GIT) checkout master && \
+			$(GIT) pull ; \
 		fi; \
 		echo "The mld-source is now up-to-date." ; \
 		cd .. ; \
