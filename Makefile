@@ -28,8 +28,10 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi3 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
-    $(CURDIR)/meta-mld-source/meta-system \
+        $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
 
 #	$(CURDIR)/meta-yocto/meta-yocto \
@@ -86,6 +88,9 @@ MACHINEBUILD=rpi
 else ifeq ($(MACHINEBUILD),rpi2)
 MACHINE=raspberrypi2
 MACHINEBUILD=rpi2
+else ifeq ($(MACHINEBUILD),rpi3)
+MACHINE=raspberrypi3
+MACHINEBUILD=rpi3
 else ifeq ($(MACHINEBUILD),bpi)
 MACHINE=bananapi
 MACHINEBUILD=bpi
