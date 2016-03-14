@@ -47,14 +47,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
     $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
-
-#	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi2 \
-#	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi3 \
-#	$(CURDIR)/meta-yocto/meta-yocto \
-#	$(CURDIR)/meta-yocto/meta-yocto-bsp \
-
-#	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
-#   $(CURDIR)/meta-mld-source/meta-hardware/meta-amlogic \
+    $(CURDIR)/meta-mld-source/meta-hardware/meta-amlogic \
 
 CONFFILES = \
 	$(TOPDIR)/env.source \
