@@ -44,17 +44,17 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi3 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
     $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
 
+#	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi2 \
+#	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi3 \
 #	$(CURDIR)/meta-yocto/meta-yocto \
 #	$(CURDIR)/meta-yocto/meta-yocto-bsp \
 
 #	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
-#	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
-#       $(CURDIR)/meta-mld-source/meta-hardware/meta-amlogic \
+#   $(CURDIR)/meta-mld-source/meta-hardware/meta-amlogic \
 
 CONFFILES = \
 	$(TOPDIR)/env.source \
@@ -102,10 +102,10 @@ MACHINE=raspberrypi
 MACHINEBUILD=rpi
 else ifeq ($(MACHINEBUILD),rpi2)
 MACHINE=raspberrypi2
-MACHINEBUILD=rpi2
+MACHINEBUILD=rpi
 else ifeq ($(MACHINEBUILD),rpi3)
 MACHINE=raspberrypi3
-MACHINEBUILD=rpi3
+MACHINEBUILD=rpi
 else ifeq ($(MACHINEBUILD),bpi)
 MACHINE=bananapi
 MACHINEBUILD=bpi
@@ -131,7 +131,7 @@ initialize: init
 init: setupmbuild $(BBLAYERS) $(CONFFILES)
 
 image: init
-	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image-$(MACHINEBUILD)
 
 test : init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -c menuconfig busybox
