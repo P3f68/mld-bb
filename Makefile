@@ -105,10 +105,10 @@ MACHINE=bananapi
 MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),cubieboard)
 MACHINE=cubieboard
-MACHINEBUILD=cubieboard
+MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),cubieboard2)
 MACHINE=cubieboard2
-MACHINEBUILD=cubieboard2
+MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),cubietruck)
 MACHINE=cubietruck
 MACHINEBUILD=bpi
