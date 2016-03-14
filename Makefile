@@ -46,12 +46,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi3 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
-<<<<<<< HEAD
-	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
     $(CURDIR)/meta-mld-source/meta-system \
-=======
-        $(CURDIR)/meta-mld-source/meta-system \
->>>>>>> abdad1195364865694ba4fcab0dc81ada92bb32a
 	$(CURDIR)/meta-local \
 
 #	$(CURDIR)/meta-yocto/meta-yocto \
