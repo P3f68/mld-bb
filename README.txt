@@ -1,6 +1,12 @@
 1.) build-enviroment
 ====================================
 
+- Ubuntu and Debian
+
+     $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+     build-essential chrpath socat libsdl1.2-dev xterm
+                        
+                        
 
 1.1) git clone http://5.9.147.200:8765/MLD/mld-bb.git
 1.2) cd mld-bb
