@@ -43,9 +43,15 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi3 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
+<<<<<<< HEAD
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
     $(CURDIR)/meta-mld-source/meta-system \
+=======
+        $(CURDIR)/meta-mld-source/meta-system \
+>>>>>>> abdad1195364865694ba4fcab0dc81ada92bb32a
 	$(CURDIR)/meta-local \
 
 #	$(CURDIR)/meta-yocto/meta-yocto \
@@ -150,8 +156,8 @@ update:
 		$(GIT) submodule update --init && \
 		cd meta-mld-source  && \
 		if [ -n "$(GIT_REMOTE)" ]; then \
-			$(GIT) submodule sync && \
-			$(GIT) submodule update --init; \
+			$(GIT) checkout master && \
+			$(GIT) pull ; \
 		fi; \
 		echo "The mld-source is now up-to-date." ; \
 		cd .. ; \
