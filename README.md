@@ -1,4 +1,7 @@
 build-enviroment
 ================
 
-This sets-up the oe-alliance build environment.
+
+1.) git clone http://5.9.147.200:8765/MLD/mld-bb.git
+2.) cd mld-bb
+3.) make update
