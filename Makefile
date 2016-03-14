@@ -110,7 +110,7 @@ MACHINE=cubieboard2
 MACHINEBUILD=cubieboard2
 else ifeq ($(MACHINEBUILD),cubietruck)
 MACHINE=cubietruck
-MACHINEBUILD=cubietruck
+MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),mele)
 MACHINE=mele
 MACHINEBUILD=mele
