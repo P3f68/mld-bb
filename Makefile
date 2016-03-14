@@ -1,5 +1,20 @@
 #!/usr/bin/make -f
 
+################################################################################
+#
+# Build Command für x86_64 
+#   - MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release make image
+#
+# Build Command für x86_64 
+#   - MACHINE=i386 DISTRO=MLD DISTRO_TYPE=release make image
+#
+# Build raspberrypi
+#   - kernel-source
+#     https://github.com/agherzan/meta-raspberrypi
+# 
+################################################################################
+
+
 # Adjust according to the number CPU cores to use for parallel build.
 # Default: Number of processors in /proc/cpuinfo, if present, or 1.
 NR_CPU := $(shell [ -f /proc/cpuinfo ] && grep -c '^processor\s*:' /proc/cpuinfo || echo 1)
@@ -29,6 +44,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-sunxi \
+	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
     $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
 
@@ -86,6 +102,9 @@ MACHINEBUILD=rpi
 else ifeq ($(MACHINEBUILD),rpi2)
 MACHINE=raspberrypi2
 MACHINEBUILD=rpi2
+else ifeq ($(MACHINEBUILD),rpi3)
+MACHINE=raspberrypi3
+MACHINEBUILD=rpi3
 else ifeq ($(MACHINEBUILD),bpi)
 MACHINE=bananapi
 MACHINEBUILD=bpi
