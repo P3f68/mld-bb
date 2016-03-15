@@ -12,7 +12,7 @@
      $ sudo dnf install gawk make wget tar bzip2 gzip python unzip perl patch \
      diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath \
      ccache perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue socat \
-     findutils which SDL-devel xterm
+     findutils which SDL-devel xterm perl-bignum
                         
 
 - OpenSUSE
@@ -80,7 +80,7 @@
     
 3.) Tipps u. Tricks u. Linksammlung
 ========================================
-3.1) wenn Ämnderungen im meta-mld-source geamcht worden sind dann
+3.1) wenn Änderungen im meta-mld-source geamcht worden sind dann
        git commit --all
        oder
        git add 'wenn neue Dateien oder Verzeichnisse hinzugekommen sind'
@@ -94,4 +94,7 @@
        git add 'wenn neue Dateien oder Verzeichnisse hinzugekommen sind'
        
        git push
+       
+3.2) openembedded MetaIndex Recipes
+     http://layers.openembedded.org/layerindex/branch/master/layers/
         
