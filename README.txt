@@ -1,5 +1,7 @@
-1.) build-enviroment
+1.) Build-Umgebung aufsetzten
 ====================================
+
+1.1.) Je nach Distribution alle notwendigen Pakete instalieren
 
 - Ubuntu and Debian
 
@@ -29,10 +31,17 @@
                         
                         
 
-1.1) git clone http://5.9.147.200:8765/MLD/mld-bb.git
-1.2) cd mld-bb
-1.3) make update
-1.4) MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release make image
+1.2) Git-Repository auschecken 
+     git clone http://5.9.147.200:8765/MLD/mld-bb.git
+   
+1.2) Ins Verzeichnis wechseln, in dem das Repository ausgechekct wurde
+     cd mld-bb
+
+1.3) Update auf alle Submodule(Sub-Repositorys machen)
+     make update
+     
+1.4) Danach kann dann das Build(make) für ein Ziel Hardware gemacht werden
+     MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release make image
      oder
      MACHINE=rpi DISTRO=MLD DISTRO_TYPE=release make image
      MACHINE=rpi2 DISTRO=MLD DISTRO_TYPE=release make image
