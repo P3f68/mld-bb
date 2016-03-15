@@ -49,7 +49,6 @@ BBLAYERS ?= \
     $(CURDIR)/meta-mld-source/meta-system \
 	$(CURDIR)/meta-local \
 
-
 CONFFILES = \
 	$(TOPDIR)/env.source \
 	$(TOPDIR)/conf/$(DISTRO).conf \
