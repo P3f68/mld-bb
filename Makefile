@@ -111,9 +111,12 @@ MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),cubietruck)
 MACHINE=cubietruck
 MACHINEBUILD=bpi
+else ifeq ($(MACHINEBUILD),draco)
+MACHINE=draco
+MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),mele)
 MACHINE=mele
-MACHINEBUILD=mele
+MACHINEBUILD=bpi
 else ifeq ($(MACHINEBUILD),wetekplay)
 MACHINE=wetekplay
 MACHINEBUILD=wetekplay
@@ -124,10 +127,10 @@ initialize: init
 init: setupmbuild $(BBLAYERS) $(CONFFILES)
 
 image: init
-	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image-$(MACHINEBUILD)
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image-$(MACHINEBUILD) 
 
 test : init
-	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -c menuconfig busybox
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && nohup bitbake $(DISTRO)-image-$(MACHINEBUILD) 
 
 
 update:

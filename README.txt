@@ -51,6 +51,9 @@
      MACHINE=cubieboard DISTRO=MLD DISTRO_TYPE=release make image
      MACHINE=cubieboard2 DISTRO=MLD DISTRO_TYPE=release make image
      
+     
+1.5) die gebauten imges liegen dann in /builds/MLD/release/<MACHINE>/tmp/delpoy/images
+     
 
 2.) Verzeichnis-Struktur
 ====================================
