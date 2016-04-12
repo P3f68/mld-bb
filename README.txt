@@ -109,4 +109,37 @@
        
 3.2) openembedded MetaIndex Recipes
      http://layers.openembedded.org/layerindex/branch/master/layers/
+     
+3.3)
+do_build                       Default task for a recipe - depends on all other normal tasks required to 'build' a recipe
+do_bundle_initramfs            Combines an initial ramdisk image and kernel together to form a single image
+do_checkuri                    Validates the SRC_URI value
+do_checkuriall                 Validates the SRC_URI value for all recipes required to build a target
+do_clean                       Removes all output files for a target
+do_cleanall                    Removes all output files, shared state cache, and downloaded source files for a target
+do_cleansstate                 Removes all output files and shared state cache for a target
+do_compile                     Compiles the source in the compilation directory
+do_configure                   Configures the source by enabling and disabling any build-time and configuration options for the software being built
+do_devpyshell                  
+do_devshell                    Starts a shell with the environment set up for development/debugging
+do_fetch                       Fetches the source code
+do_fetchall                    Fetches all remote sources required to build a target
+do_install                     Copies files from the compilation directory to a holding area
+do_listtasks                   Lists all defined tasks for a target
+do_package                     Analyzes the content of the holding area and splits it into subsets based on available packages and files
+do_package_setscene            Analyzes the content of the holding area and splits it into subsets based on available packages and files (setscene version)
+do_package_write_ipk           Creates the actual IPK packages and places them in the Package Feed area
+do_package_write_ipk_setscene  Creates the actual IPK packages and places them in the Package Feed area (setscene version)
+do_packagedata                 Creates package metadata used by the build system to generate the final packages
+do_packagedata_setscene        Creates package metadata used by the build system to generate the final packages (setscene version)
+do_patch                       Locates patch files and applies them to the source code
+do_populate_lic                Writes license information for the recipe that is collected later when the image is constructed
+do_populate_lic_setscene       Writes license information for the recipe that is collected later when the image is constructed (setscene version)
+do_populate_sdk                Creates the file and directory structure for an installable SDK
+do_populate_sysroot            Copies a subset of files installed by do_install into the sysroot in order to make them available to other recipes
+do_populate_sysroot_setscene   Copies a subset of files installed by do_install into the sysroot in order to make them available to other recipes (setscene version)
+do_rootfs                      Creates the root filesystem (file and directory structure) for an image
+do_unpack                      Unpacks the source code into a working directory
+NOTE: Tasks Summary: Attempted 1 tasks of which 0 didn't need to be rerun and all succeeded.
+
         
