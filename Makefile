@@ -132,9 +132,17 @@ init: setupmbuild $(BBLAYERS) $(CONFFILES)
 image: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image-$(MACHINEBUILD) 
 
-test : init
+nohup : init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && nohup bitbake $(DISTRO)-image-$(MACHINEBUILD) 
 
+pkg: init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) 
+	
+pkg_clean: init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -c clean $(pkg) 
+
+pkg_force: init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -f -c compile $(pkg) 
 
 update:
 	@echo 'Updating Git repositories...'
