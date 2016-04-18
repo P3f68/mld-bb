@@ -81,6 +81,8 @@ all: init
 	@echo "MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release make image"
 	@echo "	or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
+	@echo "	or"
+	@echo "MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release pkg=MLD-image-x86 make pkg"
 	@echo
 
 $(BBLAYERS):
