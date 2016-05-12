@@ -38,7 +38,10 @@ BBLAYERS ?= \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
+	$(CURDIR)/meta-openembedded/meta-networking \
+	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
+	$(CURDIR)/meta-openembedded/meta-efl \
 	$(CURDIR)/meta-mld-source \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-x86 \
 	$(CURDIR)/meta-mld-source/meta-hardware/meta-rpi \
@@ -134,7 +137,10 @@ nohup : init
 
 pkg: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) 
-	
+
+pkg-sdk: init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) -c populate_sdk 
+		
 pkg_build_clean: init
 	rm -rf $(TOPDIR)
 		

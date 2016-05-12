@@ -143,3 +143,6 @@ do_unpack                      Unpacks the source code into a working directory
 NOTE: Tasks Summary: Attempted 1 tasks of which 0 didn't need to be rerun and all succeeded.
 
         
+3.4) 
+
+IMAGE_INSTALL == rootfs
