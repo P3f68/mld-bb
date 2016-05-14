@@ -138,6 +138,9 @@ nohup : init
 pkg: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) 
 
+pkg-dep: init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -g $(pkg) 
+
 pkg-sdk: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) -c populate_sdk 
 		
