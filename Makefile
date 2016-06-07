@@ -139,8 +139,11 @@ pkg: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) 
 
 pkg-dep: init
-	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -g $(pkg) 
-
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -g $(pkg) && cat pn-depends.dot | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq > buildlist.txt
+	
+pkg-list: init
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake -c listtasks $(pkg) 
+	
 pkg-sdk: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(pkg) -c populate_sdk 
 		

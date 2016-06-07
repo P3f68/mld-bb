@@ -110,6 +110,9 @@
 3.2) openembedded MetaIndex Recipes
      http://layers.openembedded.org/layerindex/branch/master/layers/
      
+3.2.1) Openembedded Variablen
+       http://www.crashcourse.ca/wiki/index.php/OE_variable_glossary
+     
 3.3)
 do_build                       Default task for a recipe - depends on all other normal tasks required to 'build' a recipe
 do_bundle_initramfs            Combines an initial ramdisk image and kernel together to form a single image
