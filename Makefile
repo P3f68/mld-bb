@@ -235,6 +235,8 @@ $(TOPDIR)/conf/local.conf: $(DEPDIR)/.local.conf.$(LOCAL_CONF_HASH)
 	@echo 'LICENSE_FLAGS_WHITELIST = "commercial"' >> $@ 
 	@echo 'PREFERRED_PROVIDER_ffmpeg ?= "ffmpeg"' >> $@
 	@echo 'require $(TOPDIR)/conf/$(DISTRO).conf' >> $@
+	@echo 'INHERIT += "buildhistory"' >> $@
+
 
 $(TOPDIR)/conf/site.conf: $(CURDIR)/site.conf
 	@ln -s ../../../../../site.conf $@
