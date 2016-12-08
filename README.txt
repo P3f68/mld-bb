@@ -92,7 +92,7 @@
     
 3.) Tipps u. Tricks u. Linksammlung
 ========================================
-3.1) wenn Änderungen im meta-mld-source geamcht worden sind dann
+3.1) wenn Änderungen im meta-mld-source geamcht worden sind dann im meta-mld-source Verzecihnis
        git commit --all
        oder
        git add 'wenn neue Dateien oder Verzeichnisse hinzugekommen sind'
