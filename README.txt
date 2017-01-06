@@ -51,6 +51,11 @@
      MACHINE=cubieboard DISTRO=MLD DISTRO_TYPE=release make image
      MACHINE=cubieboard2 DISTRO=MLD DISTRO_TYPE=release make image
      
+1.4.1) Oder um ein einzelnes Recipes zu bauen
+       
+       z.B.: MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release pkg=vdr make pkg
+
+     
      
 1.5) die gebauten imges liegen dann in /builds/MLD/release/<MACHINE>/tmp/delpoy/images
      
@@ -71,7 +76,9 @@
             /meta-sunxi                     ( cubieboard, cubietruck ) 
             /meta-x86                       ( i386, amd64)
         /meta-system
-            /recipes-core                   ( Basis Packete der MLD)
+            /recipes-audio
+            /recipes-common                 ( Treiber )
+            /recipes-core                   ( Basis Pakete der MLD)
                 /base
                 /busybox
                 /exlinux
@@ -85,6 +92,14 @@
                 /network
                 /packagegroups
                 /psplash
+            /recipes-multimedia             ( z.B.: ffmpeg)    
+            /recipes-tools                  ( Alle zusätlichen Tools, z.B.: shelinabox)    
+            /recipes-vdr                    ( Alle vdr Pakete )
+                /vdr
+                /vdr-font-sysmbols
+                .
+                .
+                /vdr-plugin-svdrpservice
     /meta-openembedded
     /openembedded-core
     /sources                                ( Temp Verzeichnis der Source Downloads )  
