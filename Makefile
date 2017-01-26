@@ -34,6 +34,7 @@ DEPDIR = $(TOPDIR)/.deps
 MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
+
 BBLAYERS ?= \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-openembedded/meta-oe \
