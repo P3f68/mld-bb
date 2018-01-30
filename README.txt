@@ -32,7 +32,8 @@
                         
 
 1.2) Git-Repository auschecken 
-     git clone http://5.9.147.200:8765/MLD/mld-bb.git
+     #OLD -- git clone http://5.9.147.200:8765/MLD/mld-bb.git
+     git clone https://github.com/rofehr/mld-bb.git
    
 1.2) Ins Verzeichnis wechseln, in dem das Repository ausgechekct wurde
      cd mld-bb
@@ -40,7 +41,7 @@
 1.3) Update auf alle Submodule(Sub-Repositorys machen)
      make update
      
-1.4) Danach kann dann das Build(make) f�r ein Ziel Hardware gemacht werden
+1.4) Danach kann dann das Build(make) für ein Ziel Hardware gemacht werden
      MACHINE=amd64 DISTRO=MLD DISTRO_TYPE=release make image
      oder
      MACHINE=rpi DISTRO=MLD DISTRO_TYPE=release make image
@@ -70,7 +71,7 @@
     /meta-mld-souce                         ( Die MLD Sourcen )
         /conf
             /distro
-        /meta-hardware                      ( alle möglichen Ziel-Hardware ) 
+        /meta-hardware                      ( alle mÃ¶glichen Ziel-Hardware ) 
             /meta-amlogic                   ( wetekplay )    
             /meta-rpi                       ( raspberrypi, raspberrypi2, raspberrypi3 ) 
             /meta-sunxi                     ( cubieboard, cubietruck ) 
@@ -83,7 +84,7 @@
                 /busybox
                 /exlinux
                 /image                      ( 
-                                              enthält die zusammenstellungen der verschiedene Images(builds) 
+                                              enthÃ¤lt die zusammenstellungen der verschiedene Images(builds) 
                                               MLD-image-rpi.bb (raspberrypi)
                                               MLD-image-x86.bb (i386, amd64)
                                             )  
@@ -93,7 +94,7 @@
                 /packagegroups
                 /psplash
             /recipes-multimedia             ( z.B.: ffmpeg)    
-            /recipes-tools                  ( Alle zus�tlichen Tools, z.B.: shelinabox)    
+            /recipes-tools                  ( Alle zusätlichen Tools, z.B.: shelinabox)    
             /recipes-vdr                    ( Alle vdr Pakete )
                 /vdr
                 /vdr-font-sysmbols
@@ -107,7 +108,7 @@
     
 3.) Tipps u. Tricks u. Linksammlung
 ========================================
-3.1) wenn �nderungen im meta-mld-source geamcht worden sind dann im meta-mld-source Verzecihnis
+3.1) wenn Änderungen im meta-mld-source geamcht worden sind dann im meta-mld-source Verzecihnis
        git commit --all
        oder
        git add 'wenn neue Dateien oder Verzeichnisse hinzugekommen sind'
