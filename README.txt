@@ -33,7 +33,8 @@
 
 1.2) Git-Repository auschecken 
      #OLD -- git clone http://5.9.147.200:8765/MLD/mld-bb.git
-     git clone https://github.com/rofehr/mld-bb.git
+     #git clone https://github.com/rofehr/mld-bb.git
+     git clone https://github.com/rofehr/mld-bb.git --branch  bb_1.38 
    
 1.2) Ins Verzeichnis wechseln, in dem das Repository ausgechekct wurde
      cd mld-bb
