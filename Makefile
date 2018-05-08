@@ -42,7 +42,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
-	$(CURDIR)/meta-openembedded/meta-efl \
 	$(CURDIR)/meta-openembedded/meta-xfce \
 	$(CURDIR)/meta-openembedded/meta-gnome \
 	$(CURDIR)/meta-openembedded/meta-initramfs \
